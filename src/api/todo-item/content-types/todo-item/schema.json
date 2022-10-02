@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "todo_items",
+  "info": {
+    "singularName": "todo-item",
+    "pluralName": "todo-items",
+    "displayName": "TodoItem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "todo_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::todo-list.todo-list",
+      "inversedBy": "todo_items"
+    }
+  }
+}
